@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus {
+            border-color: #5a67d8;
+            box-shadow: 0 0 5px rgba(90, 103, 216, 0.5);
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5a67d8;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #434190;
+        }
+
+        /* Styled links as buttons */
+        .link-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            background-color: #5a67d8;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .link-button:hover {
+            background-color: #434190;
+        }
+
+        @media (max-width: 600px) {
+            form {
+                padding: 15px;
+            }
+
+            input[type="text"],
+            input[type="number"],
+            button,
+            .link-button {
+                font-size: 14px;
+            }
+        }
+
+        /* Center everything on the screen vertically and horizontally */
+        .centered-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-container">
+        <form method="POST" action="/products">
+            <input type="text" name="name" placeholder="Enter Name of the product" required />
+            <input type="number" name="price" placeholder="Enter the price" required />
+            <button type="submit">Add Product</button>
+        </form>
+
+        <!-- Navigation Buttons -->
+        <a href="/" class="link-button">Home</a>
+        <a href="/users" class="link-button">Clients</a>
+    </div>
+</body>
+</html>
